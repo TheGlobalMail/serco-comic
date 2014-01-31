@@ -1,0 +1,12 @@
+{
+  "name": "serco-comic",
+  "private": true,
+  "dependencies": {
+    "requirejs": "~2.1.8",
+    "modernizr": "~2.6.2",
+    "jquery": "1.10.2",
+    "tgm-styles": "git@github.com:TheGlobalMail/tgm-styles.git",
+    "lodash": "~2.4.1"
+  },
+  "devDependencies": {}
+}
