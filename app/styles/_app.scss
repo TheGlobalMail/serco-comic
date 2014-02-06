@@ -43,8 +43,9 @@ body {
   margin: 3em 0;
   padding: 0;
   &.shake {
+
     @include prefix(animation-iteration-count, infinite);
-    @include prefix(animation-duration, 1s);
+    @include prefix(animation-duration, 5s);
     @include prefix(animation-timing-function, ease-in-out);
     @include prefix(animation-fill-mode, both);
     @include prefix(animation-name, shake);
