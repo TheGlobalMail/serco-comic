@@ -1,2 +1,52 @@
 // App-specific styles go here
 
+body {
+  background: white;
+}
+
+.comic-container {
+  max-width: 641px;
+  margin: 0 auto;
+}
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ie-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+}
+
+@keyframes shake {
+  0% {
+    @include prefix(transform, 'translate(0, 0)');
+  }
+  20% {
+    @include prefix(transform, 'translate(-1px, -1px)');
+  }
+  40% {
+    @include prefix(transform, 'translate(1px, 1px)');
+  }
+  60% {
+    @include prefix(transform, 'translate(1px, -1px)');
+  }
+  80% {
+    @include prefix(transform, 'translate(-1px, 1px)');
+  }
+  100% {
+    @include prefix(transform, 'translate(0, 0)');
+  }
+}
+
+.comic-panel {
+  display: block;
+  margin: 3em 0;
+  padding: 0;
+  &.shake {
+    @include prefix(animation-iteration-count, infinite);
+    @include prefix(animation-duration, 1s);
+    @include prefix(animation-timing-function, ease-in-out);
+    @include prefix(animation-fill-mode, both);
+    @include prefix(animation-name, shake);
+  }
+}
