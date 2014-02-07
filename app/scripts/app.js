@@ -1,11 +1,17 @@
-define([], function () {
+(function($) {
   'use strict';
 
   var init = function() {
-    console.log('app.init complete');
+    if (
+      window.localStorage &&
+      localStorage.getItem &&
+      !localStorage.getItem('serco-story-popup')
+    ) {
+      $('#about').modal();
+      localStorage.setItem('serco-story-popup', true);
+    }
   };
 
-  return {
-    init: init
-  };
-});
+  $(init);
+
+})(jQuery);
