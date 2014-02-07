@@ -191,3 +191,17 @@ padding-bottom: 20px;
   	margin: 0; 
   }
 }
+
+.lt-ie9 {
+	.brand {
+		display: none !important;
+	}
+	.article-title-container {
+		width: auto !important;
+		float: left !important;
+		padding-left: 10px;
+	}
+	.navbar.special-feature {
+		height: 32px;
+	}	
+}
