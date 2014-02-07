@@ -13,4 +13,4 @@ if [ $target == "production" ] ; then
   s3cmd sync -P dist/ s3://serco-story.theglobalmail.org
 fi
 
-#grunt clean:dist
+grunt clean:dist

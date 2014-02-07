@@ -334,11 +334,11 @@ module.exports = function (grunt) {
         cdn: {
             dist: {
                 src: ['<%= yeoman.dist %>/*.html', './<%= yeoman.dist %>/styles/*.css'],
-                cdn: 'http://serco-story-assets.theglobalmail.org'
+                cdn: 'http://serco-story.theglobalmail.org'
             },
             staging: {
                 src: ['<%= cdn.dist.src %>'],
-                cdn: 'http://serco-story-staging-assets.theglobalmail.org'
+                cdn: 'http://serco-story-staging.theglobalmail.org'
             }
         },
         s3: {
