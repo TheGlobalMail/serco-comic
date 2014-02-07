@@ -316,6 +316,7 @@ module.exports = function (grunt) {
                     dest: '<%= yeoman.dist %>',
                     src: [
                         '*.{ico,png,txt}',
+                        'index.html',
                         'images/{,*/}*.{webp,gif,svg,png}',
                         'styles/fonts/{,*/}*.*',
                         'bower_components/sass-bootstrap/fonts/*.*'
@@ -333,11 +334,11 @@ module.exports = function (grunt) {
         cdn: {
             dist: {
                 src: ['<%= yeoman.dist %>/*.html', './<%= yeoman.dist %>/styles/*.css'],
-                cdn: 'http://serco-comic-assets.theglobalmail.org'
+                cdn: 'http://serco-story-assets.theglobalmail.org'
             },
             staging: {
                 src: ['<%= cdn.dist.src %>'],
-                cdn: 'http://serco-comic-staging-assets.theglobalmail.org'
+                cdn: 'http://serco-story-staging-assets.theglobalmail.org'
             }
         },
         s3: {
@@ -491,8 +492,8 @@ module.exports = function (grunt) {
 
         // Deploy bucket
         var buckets = {
-            production: 'serco-comic.theglobalmail.org',
-            staging: 'serco-comic-staging.theglobalmail.orgg'
+            production: 'serco-story.theglobalmail.org',
+            staging: 'serco-story-staging.theglobalmail.orgg'
         };
 
         // Deploy targets
