@@ -2,10 +2,19 @@
 
 body {
   background: white;
+  font-family: $font-family-sans-serif;
 }
 
 .navbar.special-feature {
   position: static;
+  .article-title {
+  	color: #eee;
+  	opacity: 1;
+  	cursor: default;
+  	font-weight: 700;
+  	font-size: 1.2em;
+  	// letter-spacing: 0;
+  }
 }
 
 @mixin prefix($property, $value) {
@@ -18,28 +27,37 @@ body {
 
 @keyframes shake {
   0% {
-    @include prefix(transform, 'translate(0, 0)');
+    @include prefix(transform, 'translate(0, 0) rotate(0) skewX(0)');
   }
   20% {
-    @include prefix(transform, 'translate(-1px, -1px)');
+    @include prefix(transform, 'translate(-1px, -1px) rotate(0.00674532925rad) skewX(0)');
   }
   40% {
-    @include prefix(transform, 'translate(1px, 1px)');
+    @include prefix(transform, 'translate(1px, 1px) rotate(0) skewX(0)');
   }
   60% {
-    @include prefix(transform, 'translate(1px, -1px)');
+    @include prefix(transform, 'translate(1px, -1px) rotate(0) skewX(0.00274532925rad)');
   }
   80% {
-    @include prefix(transform, 'translate(-1px, 1px)');
+    @include prefix(transform, 'translate(-1px, 1px) rotate(0.00674532925rad) skewX(0)');
   }
   100% {
-    @include prefix(transform, 'translate(0, 0)');
+    @include prefix(transform, 'translate(0, 0) rotate(0) skewX(0)');
   }
 }
 
-.panel {
-  &.shake {
+.comic {
+	margin: 0 auto;
+	max-width: 1200px;
+	width: 100%;
+	overflow: hidden;
+}
 
+.panel {
+	width: 100%;
+	height: auto;
+	padding-bottom: 1em;
+  &.shake {
     @include prefix(animation-iteration-count, infinite);
     @include prefix(animation-duration, 5s);
     @include prefix(animation-timing-function, ease-in-out);
@@ -48,22 +66,51 @@ body {
   }
 }
 
+// title
+#panel-01 {
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+
+// training centre
+#panel-10 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+// detention centre
+#panel-22 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+// house
+#panel-42 {
+	margin-top: 15%;
+	margin-bottom: 15%;
+}
+
+
 .article-footer {
   position: relative;
   background-color: #000;
+padding-top: 20px;
+padding-bottom: 20px;
   .credits {
     color: #ccc;
     font-size: 14px;
     list-style: none;
     margin: 4em;
-    padding-top: 40px;
-    padding-bottom: 40px;
     .tgm {
       display: block;
-      width: 492px / 2;
+      width: 250px;
       padding: 1em 0;
       opacity: 0.9;
       &:hover { opacity: 1; }
+      img {
+      	width: 100%;
+      	height: auto;
+      }
     }
   }
 }
