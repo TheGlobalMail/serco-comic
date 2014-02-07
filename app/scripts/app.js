@@ -7,22 +7,22 @@ define([
   var container;
 
   var generateImages = function() {
-    _.each(_.range(50), function(num) {
-      var image = $('<img class="comic-panel" src="assets/images/andre_limo.jpg"/>');
+    _.each(_.range(1, 60), function(num) {
+      if (num < 10) {
+        num = '0' + num;
+      }
+      var image = $('<img class="panel" src="images/' + num + '.png"/>');
       if (num === 1) {
         image.addClass('shake');
       }
-//      } else {
-//        image.addClass('shake-2');
-//      }
       container.append(image);
     });
   };
 
   var init = function() {
-    container = $('.comic-container');
+//    container = $('.comic');
 
-    generateImages();
+//    generateImages();
   };
 
   return {
