@@ -7,9 +7,11 @@ body {
 
 .navbar.special-feature {
   position: static;
+  .article-title-container {
+  	opacity: 1;  	
+  }
   .article-title {
-  	color: #eee;
-  	opacity: 1;
+  	color: #aaa;
   	cursor: default;
   	font-weight: 700;
   	font-size: 1.2em;

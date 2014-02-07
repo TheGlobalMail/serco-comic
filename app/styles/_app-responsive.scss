@@ -1,9 +1,9 @@
 // TGM Responsive Variables
 
-$smaller-width:  680px;    // -phones
+$smaller-width:  550px;    // -phones
 $small-width:    780px;    // -big phones, small tablets
 $med-width:      980px;    // -portrait tablets
-$big-width:      1120px;   // -landscape tablets, smaller screens
+$big-width:      1180px;   // -landscape tablets, smaller screens
 $bigger-width:   $big-width + 1px;   // -big screens (default, used as min-width)
 
 $med-screen-margin: 20px;
@@ -11,6 +11,12 @@ $sml-screen-margin: 10px;
 
 // Big stuff
 @media only screen and (max-width: $big-width) {
+	.article-title-container {
+		display: none !important;
+	}
+	.navbar.special-feature {
+		height: 32px;
+	}
 }
 
 // Portrait tablets
@@ -19,8 +25,16 @@ $sml-screen-margin: 10px;
 
 // Big phones, small tablets
 @media only screen and (max-width: $small-width) {
+	.special-feature-misc {
+		display: block !important;
+	}
+	.navbar.special-feature {
+padding: 8px 0px;	}
 } 
 
 // Phones
 @media only screen and (max-width: $smaller-width) {
+	.navbar.special-feature .special-feature-misc .share-button {
+		display: none;
+	}
 }
