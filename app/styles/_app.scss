@@ -129,3 +129,13 @@ padding-bottom: 20px;
   font-weight: 300;
   margin-right: 10px;
 }
+
+.comic-introduction {
+  max-width: 38em;
+  margin: 0 auto;
+  a {
+    color: #333;
+    border-bottom: 1px solid #ccc;
+    text-decoration: none;
+  }
+}
