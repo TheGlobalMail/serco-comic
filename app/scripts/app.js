@@ -1,11 +1,8 @@
-define([
-  'jquery',
-  'bootstrapModal'
-], function ($, bootstrapModal) {
+define([], function () {
   'use strict';
 
   var init = function() {
-    console.log(bootstrapModal);
+    console.log('app.init complete');
   };
 
   return {
