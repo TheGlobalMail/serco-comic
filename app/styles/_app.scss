@@ -18,13 +18,31 @@ body {
   }
 
   .special-feature-misc {
+  	top: 12px;
   	right: 10px;
+  	.share-button,
+  	.about-toggle {
+  		display: block;
+  		float: left;
+  		position: relative;
+  	}
+  	.share-button {
+  		margin-top: 2px;
+  		margin-right: 4px;
+  		&.facebook {
+			top: -2px;
+			margin-right: 0;
+  		}
+  	}
   }
+
 
   .about-toggle {
   	background: #ccc;
   	color: #333; 
   	font-weight: 500;
+  	padding-top: 3px;
+  	padding-bottom: 3px;
   	&:hover {
   		background: #fff;
   	}

@@ -26,7 +26,7 @@ $sml-screen-margin: 10px;
 
 // Portrait tablets
 @media only screen and (max-width: $med-width) {
-	.navbar.special-feature .special-feature-misc .share-button {
+	.navbar.special-feature .article-title-container {
 		display: none;
 	}
 
@@ -42,7 +42,7 @@ $sml-screen-margin: 10px;
 // Phones
 @media only screen and (max-width: $smaller-width) {
 	.navbar.special-feature .special-feature-misc .share-button {
-		display: none;
+		// display: none !important;
 	}
 
 	.article-footer {
