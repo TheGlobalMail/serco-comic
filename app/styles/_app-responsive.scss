@@ -16,7 +16,7 @@ $sml-screen-margin: 10px;
 	}
 	.article-title-container {
 		width: auto !important;
-		float: left;
+		float: left !important;
 		padding-left: 10px;
 	}
 	.navbar.special-feature {
@@ -29,15 +29,14 @@ $sml-screen-margin: 10px;
 	.navbar.special-feature .special-feature-misc .share-button {
 		display: none;
 	}
+
 }
 
 // Big phones, small tablets
 @media only screen and (max-width: $small-width) {
-	.special-feature-misc {
-		display: block !important;
-	}
-	.navbar.special-feature {
-padding: 8px 0px;	}
+	.special-feature-misc { display: block !important; }
+	.navbar.special-feature { padding: 8px 0px; }
+	.article-title-container { float: left !important; }
 } 
 
 // Phones
@@ -45,4 +44,11 @@ padding: 8px 0px;	}
 	.navbar.special-feature .special-feature-misc .share-button {
 		display: none;
 	}
+
+	.article-footer {
+		.credits {
+			margin: 1em !important;
+		}
+	}
+
 }
