@@ -20,6 +20,15 @@ body {
   .special-feature-misc {
   	right: 10px;
   }
+
+  .about-toggle {
+  	background: #ccc;
+  	color: #333; 
+  	font-weight: 500;
+  	&:hover {
+  		background: #fff;
+  	}
+  }
 }
 
 @mixin prefix($property, $value) {
@@ -51,6 +60,30 @@ body {
   }
 }
 
+.modal-dialog {
+	max-width: 700px;
+}
+
+.modal-header {
+	background: $gray;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;  
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	text-align: center;
+}
+
+.modal-body {
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.modal-footer {
+	border-top: 0 none;
+	padding-top: 0;
+}
+
 .comic {
 	margin: 0 auto;
 	max-width: 1200px;
@@ -76,7 +109,7 @@ body {
 // title
 #panel-01 {
 	margin-top: 10%;
-	margin-bottom: 10%;
+	margin-bottom: 2%;
 }
 
 // training centre
@@ -104,6 +137,7 @@ body {
 padding-top: 20px;
 padding-bottom: 20px;
   .credits {
+  	padding-left: 0;
     color: #ccc;
     font-size: 14px;
     list-style: none;
@@ -135,12 +169,25 @@ padding-bottom: 20px;
 }
 
 .comic-introduction {
+	display: none;
   max-width: 38em;
-  margin: 0 auto;
-  padding: 0 1em;
+  margin: 10% auto 0 auto;
+  padding: 2em 2em;
+  // border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 0 2px #ccc;
+  background: #eee; 
+  color: #666;
   a {
-    color: #333;
-    border-bottom: 1px solid #ccc;
-    text-decoration: none;
+    color: #666;
+    // border-bottom: 1px solid #ccc;
+    text-decoration: underline;
+    display: block;
+    // float: left;
+    width: auto;
+    margin: 1em 0 0 0;
+  }
+  p {
+  	margin: 0; 
   }
 }
