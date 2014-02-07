@@ -2,7 +2,7 @@
 
 $smaller-width:  550px;    // -phones
 $small-width:    780px;    // -big phones, small tablets
-$med-width:      980px;    // -portrait tablets
+$med-width:      900px;    // -portrait tablets
 $big-width:      1180px;   // -landscape tablets, smaller screens
 $bigger-width:   $big-width + 1px;   // -big screens (default, used as min-width)
 
@@ -11,8 +11,13 @@ $sml-screen-margin: 10px;
 
 // Big stuff
 @media only screen and (max-width: $big-width) {
-	.article-title-container {
+	.brand {
 		display: none !important;
+	}
+	.article-title-container {
+		width: auto !important;
+		float: left;
+		padding-left: 10px;
 	}
 	.navbar.special-feature {
 		height: 32px;
@@ -21,6 +26,9 @@ $sml-screen-margin: 10px;
 
 // Portrait tablets
 @media only screen and (max-width: $med-width) {
+	.navbar.special-feature .special-feature-misc .share-button {
+		display: none;
+	}
 }
 
 // Big phones, small tablets
