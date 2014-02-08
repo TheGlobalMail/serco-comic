@@ -460,7 +460,7 @@ module.exports = function (grunt) {
             'copy:tmp',
             'concurrent:dist',
             'autoprefixer',
-            'requirejs',
+            //'requirejs',
             'concat',
             'cssmin',
             'uglify',
